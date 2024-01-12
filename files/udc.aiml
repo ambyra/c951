@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+<category>
+<pattern>HELLO *</pattern>
+<template>
+Hi! I am a career coach designed to help you find a career type in computer science.
+Would you like to find a career together?
+<button>
+<text>YES</text>
+<postback>yesStart</postback>
+</button>
+<button>
+<text>NO</text>
+<postback>noStart</postback>
+</button>
+</template>
+</category>
+
+<category>
+<pattern>yesStart</pattern>
+<template>
+Great, let's start! Are you interested in writing lot's of code and making new software products?
+<button>
+<text>YES</text>
+<postback>yesCode</postback>
+</button>
+<button>
+<text>NO</text>
+<postback>noCode</postback>
+</button>
+</template>
+</category>
+
+<category>
+<pattern>yesCode</pattern>
+<template>
+You like to make new products, great! Are you interested in making video games, or other non game applications?
+<button>
+<text>Video Games</text>
+<postback>gameDeveloper</postback>
+</button>
+<button>
+<text>Other Applications</text>
+<postback>softwareDeveloper</postback>
+</button>
+</template>
+</category>
+
+<category>
+<pattern>noCode</pattern>
+<template>
+You aren't interested in creating new produts. There are many CS roles that do not involve writing a lot of code.
+Are you more interested in networking and security, or data and statistics?
+<button>
+<text>Networking and Security</text>
+<postback>networkingAndSecurity</postback>
+</button>
+<button>
+<text>Data and Statistics</text>
+<postback>dataAndStatistics</postback>
+</button>
+</template>
+</category>
+
+<category>
+<pattern>NetworkingAndSecurity</pattern>
+<template>
+Are you more interested in building and maintaining networks, 
+or looking for bugs in networks and computers that a hacker may want to attack?
+<button>
+<text>Building and Maintaining</text>
+<postback>networking</postback>
+</button>
+<button>
+<text>Looking for bugs</text>
+<postback>lookingForBugs</postback>
+</button>
+</template>
+</category>
+
+<category>
+<pattern>networking</pattern>
+<template>
+Great! It sounds like Networking Engineer is a good career choice for you. 
+A Networking Engineer designs and maintains computer networks.
+</template>
+</category>
+
+<category>
+<pattern>lookingForBugs</pattern>
+<template>
+Great! It sounds like Penetration tester is a good career choice for you.
+This job involves hacking into systems and checking for for flaws.
+</template>
+</category>
+
+<category>
+<pattern>dataAndStatistics</pattern>
+<template>
+Great! It sounds like Data Science is a good career choice for you. 
+A data scientist uses statistical techniques, machine learning, and predictive modeling to analyze and interpret large datasets.
+</template>
+</category>
+
+<category>
+<pattern>softwareDeveloper</pattern>
+<template>
+Great! It sounds like Software Developer Engineer is a good career choice for you. 
+This job involves designing, developing, and maintaining software applications, often in a group.
+
+</template>
+</category>
+
+<category>
+<pattern>gameDeveloper</pattern>
+<template>
+Great! It sounds like Game Developer is a good career choice for you. 
+This is a creative job that involves making video games for various consoles and PCs.
+</template>
+</category>
+
+
+<category>
+<pattern>noStart</pattern>
+<template>
+Goodbye!
+</template>
+</category>
+
+
+<category>
+<pattern>HI *</pattern>
+<template><srai>HELLO *</srai></template>
+</category>
+
+<category>
+<pattern>HI</pattern>
+<template><srai>HELLO *</srai></template>
+</category>
+
+<category>
+<pattern>HELLO</pattern>
+<template><srai>HELLO *</srai></template>
+</category>
+
+<category>
+<pattern>*</pattern>
+<template>I do not understand. 
+I can help you choose a career in computer science.
+Do you want to start from the beginning?
+<button>
+<text>YES</text>
+<postback>yesStart</postback>
+</button>
+<button>
+<text>NO</text>
+<postback>noStart</postback>
+</button>
+</template>
+</category>
+
+</aiml>
